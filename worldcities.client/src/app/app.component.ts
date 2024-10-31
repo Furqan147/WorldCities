@@ -13,7 +13,5 @@ interface WeatherForecast {
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  
-
   title = 'worldcities.client';
 }
