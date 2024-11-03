@@ -8,7 +8,7 @@ using WorldCities.Server.Data.Models;
 
 namespace WorldCities.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class SeedController : ControllerBase
     {
@@ -36,6 +36,8 @@ namespace WorldCities.Server.Controllers
         [HttpGet]
         public async Task<ActionResult> Import()
         {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             // prevents non-development environments from running thi
             if (!_env.IsDevelopment())
                 throw new SecurityException("Not allowed");
