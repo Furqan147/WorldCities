@@ -9,7 +9,8 @@ import { environment } from '../../environments/environment.development';
   styleUrl: './cities.component.scss'
 })
 export class CitiesComponent implements OnInit {
-  public cities?: City[];
+  public displayedColumns: string[] = [ 'id', 'name', 'lon', 'lat' ];
+  public cities?: City[] = [];
 
   constructor(private httpClient: HttpClient){}
 
