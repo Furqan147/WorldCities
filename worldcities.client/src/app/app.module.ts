@@ -11,12 +11,14 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { NavMenuComponentComponent } from './nav-menu-component/nav-menu-component.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CitiesComponent } from './cities/cities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    NavMenuComponentComponent
+    NavMenuComponentComponent,
+    CitiesComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
